@@ -18,8 +18,8 @@
 %% ===================================================================
 
 -spec lock(file:filename_all(), tuple()) -> rebar_resource:resource().
-lock(_Dir, {rsync, Url}) ->
-  {rsync, Url, "1.0"}.
+lock(_Dir, Source) ->
+  Source.
 
 -spec download(file:filename_all(), tuple(), rebar_state:t()) ->
   {tarball, file:filename_all()} | {ok, any()} | {error, any()}.
