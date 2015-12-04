@@ -23,7 +23,7 @@ lock(_Dir, {rsync, Url}) ->
 
 -spec download(file:filename_all(), tuple(), rebar_state:t()) ->
   {tarball, file:filename_all()} | {ok, any()} | {error, any()}.
-download(Dir, Source, _State) ->
+download(Dir, {rsync, Source, _}, _State) ->
   ok = filelib:ensure_dir(Dir),
   Cmd = lists:flatten(io_lib:format("rsync -az --delete ~s/ ~s", [Source, Dir])),
   rebar_utils:sh(Cmd, []).
