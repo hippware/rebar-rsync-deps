@@ -11,4 +11,4 @@
 
 -spec init(rebar_state:t()) -> {ok, rebar_state:t()}.
 init(State) ->
-    {ok, rebar_state:add_resource(State, {github, rebar_rsync_resource})}.
+  {ok, rebar_state:add_resource(State, {rsync, rebar_rsync_resource})}.

@@ -1,14 +1,1 @@
-[{<<"bbmustache">>,{pkg,<<"bbmustache">>,<<"1.0.4">>},1},
- {<<"certifi">>,{pkg,<<"certifi">>,<<"0.1.1">>},1},
- {<<"cf">>,{pkg,<<"cf">>,<<"0.2.1">>},1},
- {<<"cth_readable">>,{pkg,<<"cth_readable">>,<<"1.0.1">>},1},
- {<<"erlware_commons">>,{pkg,<<"erlware_commons">>,<<"0.16.0">>},1},
- {<<"eunit_formatters">>,{pkg,<<"eunit_formatters">>,<<"0.2.0">>},1},
- {<<"getopt">>,{pkg,<<"getopt">>,<<"0.8.2">>},1},
- {<<"providers">>,{pkg,<<"providers">>,<<"1.5.0">>},1},
- {<<"rebar">>,
-  {git,"https://github.com/rebar/rebar3.git",
-       {ref,"356ac5033d12b8b91ed0d6c4d308b00070ab12b9"}},
-  0},
- {<<"relx">>,{pkg,<<"relx">>,<<"3.8.0">>},1},
- {<<"ssl_verify_hostname">>,{pkg,<<"ssl_verify_hostname">>,<<"1.0.5">>},1}].
+[].
