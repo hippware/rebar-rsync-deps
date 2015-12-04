@@ -23,7 +23,9 @@ lock(_Dir, Source) ->
 
 -spec download(file:filename_all(), tuple(), rebar_state:t()) ->
   {tarball, file:filename_all()} | {ok, any()} | {error, any()}.
-download(Dir, {rsync, Source, _}, _State) ->
+download(Dir, {rsync, Source, _}, State) ->
+  download(Dir, {rsync, Source}, State);
+download(Dir, {rsync, Source}, _State) ->
   ok = filelib:ensure_dir(Dir),
   Cmd = lists:flatten(io_lib:format("rsync -az --delete ~s/ ~s", [Source, Dir])),
   rebar_utils:sh(Cmd, []).
@@ -34,4 +36,4 @@ needs_update(_Dir, _Source) ->
 
 -spec make_vsn(file:filename_all()) -> {plain, string()} | {error, string()}.
 make_vsn(_Dir) ->
-  {plain, "1.0"}.
+  {error, "Replacing version of type rsync not supported."}.
