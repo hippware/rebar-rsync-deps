@@ -27,7 +27,7 @@ download(Dir, {rsync, Source, _}, State) ->
   download(Dir, {rsync, Source}, State);
 download(Dir, {rsync, Source}, _State) ->
   ok = filelib:ensure_dir(Dir),
-  Cmd = lists:flatten(io_lib:format("rsync -az --delete ~s/ ~s", [Source, Dir])),
+  Cmd = lists:flatten(io_lib:format("rsync -az --delete --exclude=ebin --exclude=priv/lib ~s/ ~s", [Source, Dir])),
   rebar_utils:sh(Cmd, []).
 
 -spec needs_update(file:filename_all(), tuple()) -> boolean().
