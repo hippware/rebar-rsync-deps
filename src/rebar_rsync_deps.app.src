@@ -3,7 +3,7 @@
 
 {application, rebar_rsync_deps, [
   {description, "A rebar3 plugin to fetch dependencies with rsync"},
-  {vsn, "0.1.0"},
+  {vsn, "0.2.0"},
   {registered, []},
   {applications, [kernel, stdlib]},
   {env, []},

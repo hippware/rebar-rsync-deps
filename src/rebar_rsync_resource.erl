@@ -32,7 +32,7 @@ download(Dir, {rsync, Source}, _State) ->
 
 -spec needs_update(file:filename_all(), tuple()) -> boolean().
 needs_update(_Dir, _Source) ->
-  false.
+  true.
 
 -spec make_vsn(file:filename_all()) -> {plain, string()} | {error, string()}.
 make_vsn(_Dir) ->
